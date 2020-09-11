@@ -1,9 +1,13 @@
 import React from 'react';
 
+import useStyles from './App.styles';
+
 function App() {
+  const classes = useStyles();
   return (
-    <div>
+    <div className={classes.app}>
       Hello World
+      {/* <Grid /> */}
     </div>
   );
 }
