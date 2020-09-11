@@ -2,18 +2,35 @@ import React, { useState } from 'react';
 
 import useStyles from './styles'
 
-const Grid = () => {
-    const [pixels] = useState(Array.from({ length: 2500 }))
-    
+const initialPixels = Array.from({ length: 2500 }, () => ({
+    color: '#FFFFFF',
+}));
+
+const Grid = ({ currentColor }) => {
+    const [pixels, setPixels] = useState(initialPixels);
     const classes = useStyles();
+
+    const paintCell = (index) => () => {
+        setPixels(pixels.map((pixel, pixelIndex) => {
+            if (pixelIndex === index) {
+                return {
+                    color: currentColor
+                }
+            }
+            return pixel
+        }))
+    };
 
     return (
         <div className={classes.grid}>
             {
-                pixels.map((_, i) => (
+                pixels.map((pixel, index) => (
                     <div 
-                        key={i}
-                        className={classes.pixel}>
+                        key={index}
+                        className={classes.pixel}
+                        onClick={paintCell(index)}
+                        style={{ background: pixel.color }}
+                    >
                     </div>
                 ))
             }
