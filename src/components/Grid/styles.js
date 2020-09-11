@@ -12,18 +12,10 @@ export default createUseStyles({
   pixel: {
     cursor: 'pointer',
     background: 'white',
-    '&:hover': {
-        transform: 'scale(1.1)',
-        border: '1px solid black',
-    }    
-  },
-  colorInput: {
-    margin: '1rem',
-    padding: '0',
-    width: '80vw',
-    height: '30px',
-    outline: 'none',
-    border: 'none',
-    cursor: 'pointer',
+    border: '1px solid black',
+    // '&:hover': {
+    //     transform: 'scale(1.1)',
+    //     
+    // }    
   }
 });
