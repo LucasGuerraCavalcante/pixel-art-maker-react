@@ -8,5 +8,11 @@ export default createUseStyles({
     height: '100%',
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  toolBox: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+
   }
 });
