@@ -1,26 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import useStyles from './styles'
 
-const ColorPicker = () => {
-    const [currentColor, setCurrentColor] = useState('#56BC58')
-    
-    const classes = useStyles({ currentColor });
+const ColorPicker = ({ currentColor, setCurrentColor }) => {
+    const classes = useStyles();
 
     const colorChange = (event) => {
         setCurrentColor(event.target.value);
-        // console.log(event.target.value);
     }
 
     return (
-        <>
-            <input 
-                type="color" 
-                className={classes.colorInput} 
-                value={currentColor}
-                onChange={colorChange} 
-            />
-        </>
+        <input 
+            type="color" 
+            className={classes.colorInput} 
+            // value={currentColor}
+            onBlur={colorChange} 
+        />
     )
 };
 
