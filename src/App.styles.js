@@ -11,8 +11,8 @@ export default createUseStyles({
   },
   toolBox: {
     display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-
+    alignItems: 'center',
+    width: '80vw',
+    height: '40px',
   }
 });
