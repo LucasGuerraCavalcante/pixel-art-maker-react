@@ -19,7 +19,6 @@ function App() {
   const classes = useStyles();
   return (
     <div className={classes.app}>
-
       <div className={classes.toolBox}>
         <ColorPicker 
           currentColor={currentColor} 

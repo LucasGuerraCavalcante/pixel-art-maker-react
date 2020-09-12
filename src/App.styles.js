@@ -4,15 +4,16 @@ export default createUseStyles({
   app: {
     display: 'flex',
     flexDirection: 'column',
-    width: '100%',
-    height: '100%',
+    padding: '1rem',
+    minHeight: '100vh',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    boxSizing: 'border-box'
   },
   toolBox: {
     display: 'flex',
     alignItems: 'center',
-    width: '80vw',
+    width: '80vh',
     height: '40px',
   }
 });
