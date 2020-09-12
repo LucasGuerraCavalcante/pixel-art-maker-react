@@ -12,7 +12,7 @@ function App() {
   const [showGrid, setShowGrid] = useState(false);
 
   const onSetColor = (color) => {
-    setColorHistoryPalatte(colorHistoryPalatte.slice(-5).concat(color))
+    setColorHistoryPalatte(colorHistoryPalatte.concat(color));
     setCurrentColor(color);
   };
 
@@ -34,7 +34,7 @@ function App() {
 
       <ColorPalette 
           colorHistoryPalatte={colorHistoryPalatte} 
-          onSetColor={onSetColor} 
+          setCurrentColor={setCurrentColor} 
       />
 
       <Grid 
