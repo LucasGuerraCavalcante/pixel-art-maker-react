@@ -9,9 +9,8 @@ export default createUseStyles({
         width: '15px',
         height: '15px',
         outline: 'none',
-        border: 'none',
         cursor: 'pointer',
-        border: '2px solid black'
+        border: '1px solid black'
     },
     colorPaletteContainer: {
        display: 'flex' 
