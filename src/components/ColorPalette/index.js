@@ -2,24 +2,23 @@ import React from 'react';
 
 import useStyles from './styles'
 
-const ColorPicker = ({ colorHistoryPalatte, onSetColor }) => {
+const ColorPicker = ({ colorHistoryPalatte, setCurrentColor }) => {
     const classes = useStyles();
 
-    function colorChange() {
-        // onSetColor();
+    function handlePaletteColorSelect(hex) {
+        setCurrentColor(hex)
     }
 
     return (
         <div className={classes.colorPaletteContainer}>
         {
-            colorHistoryPalatte.map((color) => (
+            colorHistoryPalatte.slice(-5).map((color) => (
                 <div 
                     key={color}
                     className={classes.colorPalettePicker}
-                    onClick={colorChange}
+                    onClick={e => handlePaletteColorSelect(color)}
                     style={{ background: color }}
                 >
-
                 </div>
             ))
         }
