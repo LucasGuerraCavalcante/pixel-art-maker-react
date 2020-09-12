@@ -10,6 +10,5 @@ export default createUseStyles({
     outline: 'none',
     border: 'none',
     cursor: 'pointer',
-    gridArea: 'colorpicker'
   }
 });
