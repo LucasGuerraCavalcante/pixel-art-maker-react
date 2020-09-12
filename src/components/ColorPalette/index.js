@@ -17,7 +17,9 @@ const ColorPicker = ({ colorHistoryPalatte, setCurrentColor }) => {
                     key={color}
                     className={classes.colorPalettePicker}
                     onClick={e => handlePaletteColorSelect(color)}
-                    style={{ background: color }}
+                    style={{ 
+                        background: color
+                     }}
                 >
                 </div>
             ))
