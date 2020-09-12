@@ -2,7 +2,7 @@ import React from 'react';
 
 import useStyles from './styles'
 
-const ColorPicker = ({ onSetColor }) => {
+const ColorPicker = ({ onSetColor, currentColor }) => {
     const classes = useStyles();
 
     const colorChange = (event) => {
