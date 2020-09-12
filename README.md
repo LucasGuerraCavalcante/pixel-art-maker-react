@@ -3,11 +3,11 @@ Pixel Art Maker on React.js
 
 # Deploy
 
-soon... 
+https://pixel-art-maker-react.vercel.app/
 
 # Preview
 
-Old version, check the deploy.
+This is an older version, please check the deploy link.
 
 ![previwe](https://i.imgur.com/gPsmwm7.png)
 
