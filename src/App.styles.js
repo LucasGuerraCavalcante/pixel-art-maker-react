@@ -15,5 +15,12 @@ export default createUseStyles({
     alignItems: 'center',
     width: '80vh',
     height: '40px',
+  },
+  colorBox: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '80vh',
+    height: '40px',
   }
 });
