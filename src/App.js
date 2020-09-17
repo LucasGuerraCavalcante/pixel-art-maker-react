@@ -4,11 +4,12 @@ import Grid from './components/Grid/';
 import GridSwitch from './components/GridSwitch/';
 import ColorPicker from './components/ColorPicker/';
 import ColorPalette from './components/ColorPalette/';
+import CurrentColor from './components/CurrentColor/';
 import useStyles from './App.styles';
 
 function App() {
-  const [currentColor, setCurrentColor] = useState('#000');
-  const [colorHistoryPalatte, setColorHistoryPalatte] = useState(['#000']);
+  const [currentColor, setCurrentColor] = useState('#000000');
+  const [colorHistoryPalatte, setColorHistoryPalatte] = useState(['#000000']);
   const [showGrid, setShowGrid] = useState(false);
 
   const onSetColor = (color) => {
@@ -31,10 +32,16 @@ function App() {
         />
       </div>
 
-      <ColorPalette 
-          colorHistoryPalatte={colorHistoryPalatte} 
-          setCurrentColor={setCurrentColor} 
-      />
+      <div className={classes.colorBox}>
+        <CurrentColor 
+          currentColor={currentColor} 
+        />
+
+        <ColorPalette 
+            colorHistoryPalatte={colorHistoryPalatte} 
+            setCurrentColor={setCurrentColor} 
+        />
+      </div>
 
       <Grid 
         currentColor={currentColor} 
