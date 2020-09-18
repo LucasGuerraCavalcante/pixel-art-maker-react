@@ -41,6 +41,10 @@ function App() {
             colorHistoryPalatte={colorHistoryPalatte} 
             setCurrentColor={setCurrentColor} 
         />
+
+        <div>
+          Right click to erase
+        </div>
       </div>
 
       <Grid 
